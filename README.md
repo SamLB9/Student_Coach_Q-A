@@ -1,4 +1,4 @@
-## Study Coach — Streamlit Q&A App
+## 🧑‍🏫 Study Coach — Streamlit Q&A App
 
 A study coach that ingests your notes (PDF/TXT/MD), generates adaptive quizzes, grades answers with structured feedback, and tracks progress over time. Includes a Streamlit web app and a CLI.
 
