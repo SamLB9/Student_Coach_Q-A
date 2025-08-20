@@ -4,6 +4,8 @@ A study coach that ingests your notes (PDF/TXT/MD), generates adaptive quizzes, 
 
 ![Alt text](Streamlit_Q&A.png)
 
+---
+
 ### 🔑 Key features
 - **Upload Notes tab**: Upload PDFs/TXT/MD. Notes are saved to `data/notes/` and the vector store is rebuilt.
 - **Quiz tab**:
