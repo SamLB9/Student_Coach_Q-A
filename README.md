@@ -10,7 +10,6 @@ A study coach that ingests your notes (PDF/TXT/MD), generates adaptive quizzes, 
   - Avoid prompts: avoid repeating questions you’ve seen before (all or only those answered correctly).
   - Adaptive difficulty: easier if <50% accuracy, harder reasoning if ≥80%.
   - Clean inline feedback: “Correct/Incorrect + explanation”. Shows the correct option for MCQs.
-  - Single-click buttons, disabled while grading, with spinners.
 - **Progress tab**: Session summary and frequently missed questions per topic (with error rate and avg response time).
 - **Persistent memory**: `progress.json` logs sessions and per-question attempts with timing.
 
