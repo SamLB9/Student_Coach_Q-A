@@ -4,7 +4,7 @@ A study coach that ingests your notes (PDF/TXT/MD), generates adaptive quizzes, 
 
 ![Alt text](Streamlit_Q&A.png)
 
-### Key features
+### 🔑 Key features
 - **Upload Notes tab**: Upload PDFs/TXT/MD. Notes are saved to `data/notes/` and the vector store is rebuilt.
 - **Quiz tab**:
   - Topic input, number of questions.
@@ -15,11 +15,11 @@ A study coach that ingests your notes (PDF/TXT/MD), generates adaptive quizzes, 
 - **Progress tab**: Session summary and frequently missed questions per topic (with error rate and avg response time).
 - **Persistent memory**: `progress.json` logs sessions and per-question attempts with timing.
 
-## Quickstart
+## ⚡ Quickstart
 
-### Requirements
-- Python 3.10+ recommended
-- An OpenAI API key (stored in a local `.env` file)
+### 🛠️ Requirements
+- 🐍 Python 3.10+ recommended
+- 🔑 An OpenAI API key (stored in a local `.env` file)
 
 Install dependencies (optional but recommended to use a virtualenv):
 ```bash
@@ -33,38 +33,38 @@ Create a `.env` file in the project root (do NOT commit this file):
 OPENAI_API_KEY=sk-your-key-here
 ```
 
-### Launch the Streamlit app
+### 🚀 Launch the Streamlit app
 ```bash
 streamlit run app.py
 ```
-- Tab 1: Upload notes → files go to `data/notes/` and the vector store rebuilds
-- Tab 2: Quiz → choose topic, options, and start
-- Tab 3: Progress → view sessions and frequently missed questions
+- 1️⃣ Tab 1: Upload notes → files go to `data/notes/` and the vector store rebuilds
+- 2️⃣ Tab 2: Quiz → choose topic, options, and start
+- 3️⃣ Tab 3: Progress → view sessions and frequently missed questions
 
-### CLI usage (optional)
+### 💻 CLI usage (optional)
 Run a quiz from the terminal:
 ```bash
 python -m src.main --topic "Bayes theorem" --n 4 --avoid all --feedback immediate
 ```
 Flags (CLI):
-- `--topic` (required): quiz topic
-- `--n`: number of questions (default 4)
-- `--avoid`: `all` to avoid all past prompts, `correct` to avoid only correctly answered ones
-- `--feedback`: `immediate` or `end`
-- `--docs`: notes folder (default `data/notes`)
-- `--rebuild`: rebuild vector store (if needed)
+- 🎯 `--topic` (required): quiz topic
+- 🔢 `--n`: number of questions (default 4)
+- 🔄 `--avoid`: `all` to avoid all past prompts, `correct` to avoid only correctly answered ones
+- ⚡ `--feedback`: `immediate` or `end`
+- 📂 `--docs`: notes folder (default `data/notes`)
+- 🛠️ `--rebuild`: rebuild vector store (if needed)
 
-## How it works
+## 🧠 How it works
 
-### Ingestion and retrieval
+### 📥 Ingestion and retrieval
 - Notes are chunked and embedded using LangChain + OpenAI embeddings.
 - A Chroma vector store (`vectorstore/`) is used to retrieve relevant context for the quiz.
 
-### Quiz generation and grading
+### 📝 Quiz generation and grading
 - `src/quiz_engine.py` calls the LLM to generate structured JSON (MCQ + short-answer).
 - `src/evaluation.py` grades each answer and returns `{correct: bool, feedback: str}`.
 
-### Memory and adaptivity
+### 🧩 Memory and adaptivity
 - `src/memory.py` logs:
   - `sessions`: topic, score, timestamp, details
   - `attempts`: each question’s prompt, student answer, correctness, `response_ms`
@@ -87,7 +87,7 @@ Example `progress.json` (trimmed):
 }
 ```
 
-## Project structure
+## 🗂️ Project structure
 ```text
 Q&A_Agent/
   app.py                 # Streamlit app (Upload Notes, Quiz, Progress)
@@ -105,5 +105,5 @@ Q&A_Agent/
   progress.json          # progress log (ignored via .gitignore)
 ```
 
-## Troubleshooting
-- Chroma deprecation warnings: we’re using `langchain_chroma`; ensure `langchain-chroma` is installed.
+## 🛠️ Troubleshooting
+- ⚠️ Chroma deprecation warnings: we’re using `langchain_chroma`; ensure `langchain-chroma` is installed.
