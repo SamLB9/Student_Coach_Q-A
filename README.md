@@ -2,6 +2,8 @@
 
 A study coach that ingests your notes (PDF/TXT/MD), generates adaptive quizzes, grades answers with structured feedback, and tracks progress over time. Includes a Streamlit web app and a CLI.
 
+![Alt text](Streamlit_Q&A.png)
+
 ### Key features
 - **Upload Notes tab**: Upload PDFs/TXT/MD. Notes are saved to `data/notes/` and the vector store is rebuilt.
 - **Quiz tab**:
@@ -12,8 +14,6 @@ A study coach that ingests your notes (PDF/TXT/MD), generates adaptive quizzes, 
   - Clean inline feedback: “Correct/Incorrect + explanation”. Shows the correct option for MCQs.
 - **Progress tab**: Session summary and frequently missed questions per topic (with error rate and avg response time).
 - **Persistent memory**: `progress.json` logs sessions and per-question attempts with timing.
-
-![Alt text](Streamlit_Q&A.png)
 
 ## Quickstart
 
