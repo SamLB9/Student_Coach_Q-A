@@ -13,10 +13,5 @@ venv/
 # OS
 .DS_Store
 
-# App data
-vectorstore/
-data/notes/
-progress.json
-
 # Streamlit
 .streamlit/
