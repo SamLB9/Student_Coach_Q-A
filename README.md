@@ -103,16 +103,5 @@ Q&A_Agent/
   progress.json          # progress log (ignored via .gitignore)
 ```
 
-## Environment & privacy
-- Keep your OpenAI key only in `.env`. Do not commit it.
-- `.gitignore` excludes `vectorstore/`, `data/notes/`, and `progress.json` to avoid pushing large or private data.
-
 ## Troubleshooting
-- Streamlit buttons require two clicks or switch pages: fixed by using reruns with unique keys and inline feedback; ensure you’re on the latest `app.py`.
 - Chroma deprecation warnings: we’re using `langchain_chroma`; ensure `langchain-chroma` is installed.
-- Large repo or secret push blocked by GitHub:
-  - Ensure `.gitignore` ignores `vectorstore/`, `data/notes/`, `progress.json`, `.env`.
-  - If the secret/large files entered history, rewrite with `git filter-repo`, then `git push -f`.
-
-## License
-MIT (or your preferred license)
