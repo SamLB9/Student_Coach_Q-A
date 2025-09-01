@@ -2,6 +2,10 @@
 
 A study coach that ingests your notes (PDF/TXT/MD), generates adaptive quizzes, grades answers with structured feedback, and tracks progress over time. Includes a Streamlit web app and a CLI.
 
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--5-green.svg)](https://openai.com)
+
 ![Alt text](Streamlit_Q&A.png)
 
 ## 🔑 Key features
